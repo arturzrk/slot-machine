@@ -1,0 +1,13 @@
+{
+  "name": "slot-machine",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-css": "sass renderer/slotmachinestyle.scss renderer/slotmachinestyle.css"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "sass": "^1.89.2"
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./renderer/slotmachinestyle.css" />
+  <title>Slot Machine</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #222;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .reels {
+      display: flex;
+      gap: 10px;
+    }
+    .reel {
+      width: 79px;
+      height: 79px;
+      background: url('https://assets.codepen.io/439000/slotreel.webp');
+      background-repeat: repeat-y;
+      background-size: contain;
+      border: 2px solid white;
+    }
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .controls button {
+      padding: 10px;
+      font-size: 1rem;
+    }
+    .admin-panel {
+      margin-top: 30px;
+    }
+    .admin-panel input {
+      margin-left: 10px;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="reels">
+    <div class="reel" id="reel0"></div>
+    <div class="reel" id="reel1"></div>
+    <div class="reel" id="reel2"></div>
+  </div>
+
+    <div class="controls">
+    <button id="start">Start</button>
+    <button id="stop0">Stop Reel 1</button>
+    <button id="stop1">Stop Reel 2</button>
+    <button id="stop2">Stop Reel 3</button>
+  </div>
+
+  <div class="admin-panel">
+    <label for="speed">Rolling Speed (ms per icon):</label>
+    <input type="number" id="speed" value="100" min="10" max="1000"/>
+  </div>
+
+  <script type="module" src="./renderer/main.js"></script>
+</body>
+</html>

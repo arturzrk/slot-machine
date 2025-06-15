@@ -15,5 +15,3 @@ Full-size Upright Slot Machine Cabinet with:
 - Standard 19" LCD monitor
 - 3x buttons to stop each roll
 - 1x start button
-
-

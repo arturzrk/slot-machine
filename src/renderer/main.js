@@ -18,13 +18,13 @@ function getSpeedSetting() {
 }
 
 const roll = (reel, offset = 0, index) => {
-  const delta = (offset + 2) * num_icons + Math.round(Math.random() * num_icons);
+  const delta = 1;//(offset + 2) * num_icons + Math.round(Math.random() * num_icons);
   const style = getComputedStyle(reel);
   const backgroundPositionY = parseFloat(style['background-position-y']) || 0;
 
   return new Promise((resolve) => {
     const duration = 8 + delta * speed;
-    reel.style.transition = `background-position-y ${duration}ms`;
+    reel.style.transition = `background-position-y ${duration}ms linear`;
     reel.style.backgroundPositionY = `${backgroundPositionY + delta * icon_height}px`;
     setTimeout(() => resolve(delta), duration);
   });

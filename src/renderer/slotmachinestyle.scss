@@ -37,5 +37,6 @@ body {
         width: $icon_width;
         height: 3 * $icon_height;
         background-image: url("https://assets.codepen.io/439000/slotreel.webp");
+        background-size: cover;
     }
 }

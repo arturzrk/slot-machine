@@ -7,8 +7,8 @@ require('electron-reload')(__dirname, {
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 400,
-    height: 600,
+    width: 800,
+    height: 800,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     }

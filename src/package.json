@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "build-css": "sass renderer/slotmachinestyle.scss renderer/slotmachinestyle.css"
+    "start": "concurrently \"npm run watch-css\" \"electron .\"",
+    "watch-css": "sass --watch renderer/slotmachinestyle.scss renderer/slotmachinestyle.css"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "electron": "^30.0.0",
     "electron-reload": "^2.0.0-alpha.1",
     "sass": "^1.89.2"

@@ -1,5 +1,5 @@
-const icon_width = 79;
-const icon_height = 79;
+const icon_width = 120;
+const icon_height = 120;;
 const num_icons = 9;
 let rolling = [false, false, false];
 let speed = 100;
@@ -47,6 +47,14 @@ function rollLoop(reel, index) {
 
 function stop(index) {
   rolling[index] = false;
+  setTimeout(() => {
+    const reel = document.querySelectorAll('.reel')[index];
+    const style = getComputedStyle(reel);
+    let pos = parseFloat(style['background-position-y']) || 0;
+    pos = Math.round(pos / icon_height) * icon_height;
+    reel.style.transition = 'background-position-y 100ms linear';
+    reel.style.backgroundPositionY = `${pos}px`;
+  }, speed + 10);
 }
 
 document.getElementById('start').addEventListener('click', rollAll);

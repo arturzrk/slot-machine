@@ -21,18 +21,18 @@ body {
 }
 
 .slots {
-  width: 276.5px;
-  height: 237px;
+  width: 420px;
+  height: 360px;
   border: 1px solid black;
-  padding: 23.7px;
+  padding: 36px;
   display: flex;
   justify-content: space-between;
 }
 .slots .reel {
   border: 1px solid black;
-  width: 79px;
-  height: 237px;
-  background-image: url("https://assets.codepen.io/439000/slotreel.webp");
+  width: 120px;
+  height: 360px;
+  background-image: url("./assets/slot_icons_stacked.webp");
   background-size: cover;
 }
 
